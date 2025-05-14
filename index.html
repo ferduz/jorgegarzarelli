@@ -1,348 +1,268 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js no-svg">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 <title>Jorge G. Garzarelli – Doctor en Psicología</title>
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//s.w.org">
-<link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
 
-<link rel="stylesheet" id="twentyseventeen-fonts-css" href="https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&subset=latin%2Clatin-ext" type="text/css" media="all">
-<link rel="stylesheet" id="twentyseventeen-style-css" href="/wp-content/themes/twentyseventeen/style.css" type="text/css" media="all">
+<!-- Agregamos estilos básicos para que se vea bien -->
+<style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery.js"></script>
-<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-<style> .entry-footer .byline{ display:none !important; } </style>
-<style> .entry-meta .byline{ display:none !important; } </style>
-<style> .entry-footer .posted-on{ display:none !important; } </style>
-<style> .entry-meta .entry-date{ display:none !important; } </style>
-<style> .entry-meta .date{ display:none !important; } </style>
-<style> .entry-footer .cat-links{ display:none !important; } </style>
-<style> .entry-meta .cat-links{ display:none !important; } </style>
-<style> .entry-meta .categories-links{ display:none !important; } </style>
-<style> .entry-footer .comments-link{ display:none !important; } </style>
-<style> .entry-meta .comments-link{ display:none !important; } </style>
-<style> .entry-footer .edit-link{ display:none !important; } </style>
-<style> .entry-meta .edit-link{ display:none !important; } </style>
+/* Header */
+.site-header {
+    position: relative;
+    background: #f8f9fa;
+}
 
-<style id="twentyseventeen-custom-header-styles" type="text/css">
-.site-title a,
-.colors-dark .site-title a,
-.colors-custom .site-title a,
-body.has-header-image .site-title a,
-body.has-header-video .site-title a,
-body.has-header-image.colors-dark .site-title a,
-body.has-header-video.colors-dark .site-title a,
-body.has-header-image.colors-custom .site-title a,
-body.has-header-video.colors-custom .site-title a,
-.site-description,
-.colors-dark .site-description,
-.colors-custom .site-description,
-body.has-header-image .site-description,
-body.has-header-video .site-description,
-body.has-header-image.colors-dark .site-description,
-body.has-header-video.colors-dark .site-description,
-body.has-header-image.colors-custom .site-description,
-body.has-header-video.colors-custom .site-description {
+.custom-header-media {
+    position: relative;
+    height: 50vh;
+    background-image: url('assets/images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-branding {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.site-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.site-title a {
+    color: #0e76a8;
+    text-decoration: none;
+}
+
+.site-description {
+    font-size: 1.2rem;
     color: #0e76a8;
 }
+
+/* Navigation */
+.navigation-top {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #0e76a8;
+}
+
+/* Content */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-content {
+    padding: 3rem 0;
+}
+
+.panel-content {
+    margin-bottom: 3rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.panel-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.entry-header, .entry-content {
+    padding: 2rem;
+}
+
+.entry-title {
+    font-size: 2rem;
+    color: #0e76a8;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.site-footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .custom-header-media {
+        height: 40vh;
+    }
+}
 </style>
 
-<style type="text/css" id="wp-custom-css">
-@media screen and (min-width: 1em) {
-.custom-logo-link img {
-    max-width: 600px;
-    border-radius:190%;
-}
-}
-
-.custom-logo-link img {
-/* display: inline-block; */
-max-height: 200px;
-/* width: auto; */
-}
-.site-title {
-font-size: 60px;
-line-height: 1;
-margin: 0;
-padding: 58px 0 10px;
-}
-
-.wrap {
-max-width: 85%;
-}
-
-@media screen and (min-width: 48em) {
-.wrap {
-max-width: 85%;
-}
-}
-
-.page.page-one-column:not(.twentyseventeen-front-page) #primary {
-max-width: 85%;
-}
-
-@media screen and (min-width: 30em) {
-.page-one-column .panel-content .wrap
-{
-max-width: 85%;
-}
-}
-
-.has-sidebar #secondary {
-width: 26% !important;
-}
-
-.site-info { display: none; }
-</style>
 </head>
 
-<body class="home page-template-default page page-id-8 twentyseventeen-front-page has-header-image page-two-column colors-light">
+<body>
 <div id="page" class="site">
-<a class="skip-link screen-reader-text" href="#content">Ir al contenido</a>
 
-<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header">
+    <div class="custom-header">
+        <div class="custom-header-media">
+            <!-- Coloca tu imagen aquí: assets/images/header-bg.jpg -->
+        </div>
+        
+        <div class="site-branding">
+            <h1 class="site-title">
+                <a href="index.html">Jorge G. Garzarelli</a>
+            </h1>
+            <p class="site-description">Doctor en Psicología</p>
+        </div>
+    </div>
 
-<div class="custom-header">
-
-<div class="custom-header-media">
-    <div id="wp-custom-header" class="wp-custom-header"><img src="https://jorgegarzarelli.com.ar/wp-content/uploads/2019/08/cropped-196.jpg" width="2000" height="1201" alt="Jorge G. Garzarelli" srcset="https://jorgegarzarelli.com.ar/wp-content/uploads/2019/08/cropped-196.jpg 2000w,https://jorgegarzarelli.com.ar/wp-content/uploads/2019/08/cropped-196-300x180.jpg 300w,https://jorgegarzarelli.com.ar/wp-content/uploads/2019/08/cropped-196-768x461.jpg 768w,https://jorgegarzarelli.com.ar/wp-content/uploads/2019/08/cropped-196-1024x615.jpg 1024w" sizes="100vw"></div>
-</div>
-
-<div class="site-branding">
-<div class="wrap">
-
-<div class="site-branding-text">
-    <h1 class="site-title"><a href="https://jorgegarzarelli.com.ar/" rel="home">Jorge G. Garzarelli</a></h1>
-    <p class="site-description">Doctor en Psicología</p>
-</div>
-
-</div>
-</div>
-
-</div>
-
-<div class="navigation-top">
-<div class="wrap">
-    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Menú superior">
-<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-    <svg class="icon icon-bars" aria-hidden="true" role="img"> <use href="#icon-bars" xlink:href="#icon-bars"></use> </svg><svg class="icon icon-close" aria-hidden="true" role="img"> <use href="#icon-close" xlink:href="#icon-close"></use> </svg>Menú
-</button>
-
-<div class="menu-menu-superior-container"><ul id="top-menu" class="menu"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-21"><a href="https://jorgegarzarelli.com.ar/">Inicio</a></li>
-<li id="menu-item-370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-370"><a href="/category/sonido-color-y-afecto/index.html">Sonido-Color y Afectos</a></li>
-<li id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-71"><a href="/category/el-mito-desde-freud-jung-lacan/index.html">El mito desde Freud, Jung y Lacan</a></li>
-<li id="menu-item-91" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91"><a href="/category/psicologia-por-la-paz/index.html">Psicología por la Paz</a></li>
-<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-95"><a href="/category/psicologia-del-deporte/index.html">Psicología del Deporte</a></li>
-<li id="menu-item-234" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-234"><a href="/category/psicologia-del-arte/index.html">Psicología del Arte</a></li>
-<li id="menu-item-447" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-447"><a href="/category/piscologia-aplicada-al-turismo/index.html">Piscología aplicada al Turismo</a></li>
-<li id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70"><a href="/category/clinica-abierta/index.html">Clínica Abierta</a></li>
-<li id="menu-item-270" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-270"><a href="/category/poemas/index.html">Poemas</a></li>
-<li id="menu-item-324" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-324"><a href="/category/arte/index.html">Arte</a></li>
-<li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-299"><a href="/category/seminarios/index.html">Seminarios</a></li>
-<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="/contacto/index.html">Contacto</a></li>
-</ul></div>
-
-<a href="#content" class="menu-scroll-down"><svg class="icon icon-arrow-right" aria-hidden="true" role="img"> <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use> </svg><span class="screen-reader-text">Desplazarse al contenido</span></a>
-</nav>
-</div>
-</div>
-
+    <div class="navigation-top">
+        <div class="wrap">
+            <nav class="main-navigation">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sonido-color.html">Sonido-Color y Afectos</a></li>
+                    <li><a href="mito-freud-jung-lacan.html">El mito desde Freud, Jung y Lacan</a></li>
+                    <li><a href="psicologia-paz.html">Psicología por la Paz</a></li>
+                    <li><a href="psicologia-deporte.html">Psicología del Deporte</a></li>
+                    <li><a href="psicologia-arte.html">Psicología del Arte</a></li>
+                    <li><a href="turismo.html">Psicología aplicada al Turismo</a></li>
+                    <li><a href="clinica-abierta.html">Clínica Abierta</a></li>
+                    <li><a href="poemas.html">Poemas</a></li>
+                    <li><a href="arte.html">Arte</a></li>
+                    <li><a href="seminarios.html">Seminarios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
 
-<div class="site-content-contain">
-<div id="content" class="site-content">
+<div class="site-content">
+    <div class="wrap">
+        
+        <article class="panel-content">
+            <header class="entry-header">
+                <h2 class="entry-title">Inicio</h2>
+            </header>
+            <div class="entry-content">
+                <p>Bienvenidos a la página personal del Jorge G. Garzarelli.</p>
+            </div>
+        </article>
 
-<div id="primary" class="content-area">
-<main id="main" class="site-main" role="main">
+        <article class="panel-content">
+            <div class="panel-image" style="background-image: url('assets/images/prometeo.jpg');"></div>
+            <header class="entry-header">
+                <h2 class="entry-title">El mito desde Freud, Jung y Lacan</h2>
+            </header>
+            <div class="entry-content">
+                <blockquote>
+                    <p>Este trabajo nace como el efecto de un 'deseo de saber' acerca de los orígenes del mito. Pregunta inicial a la que se fueron añadiendo otras paulatinamente. ¿Tienen los mitos su origen en el inconciente?</p>
+                </blockquote>
+            </div>
+        </article>
 
-<article id="post-8" class="twentyseventeen-panel  post-8 page type-page status-publish hentry">
+        <article class="panel-content">
+            <div class="panel-image" style="background-image: url('assets/images/deporte.jpg');"></div>
+            <header class="entry-header">
+                <h2 class="entry-title">Psicología del Deporte</h2>
+            </header>
+            <div class="entry-content">
+                <p><em>Cualquier profesional que anhele pertenecer al deporte, deberá conocer profundamente no solo la conformación del mismo sino su historia y las reglas que, condicionan su estructura y su desarrollo.</em></p>
+            </div>
+        </article>
 
-<div class="panel-content">
-<div class="wrap">
-    <header class="entry-header">
-        <h2 class="entry-title">Inicio</h2>
-    </header>
+        <article class="panel-content">
+            <div class="panel-image" style="background-image: url('assets/images/books.jpg');"></div>
+            <header class="entry-header">
+                <h2 class="entry-title">Acerca de</h2>
+            </header>
+            <div class="entry-content">
+                <p><strong>Doctor en Psicología (Diploma de Honor) egresado de la Facultad de Psicología – Universidad del Salvador – 1982.</strong></p>
+                <p><strong>Licenciado de Psicología (Diploma de Honor), egresado de la Facultad de Psicología – Universidad del Salvador – 1974 – Matrícula Nacional 10512</strong></p>
+                <p><strong>Profesor Titular Psicología y Religión – Facultad de Psicología – Universidad del Salvador.</strong></p>
+                <p><strong>Profesor Emérito de la Facultad de Psicología y Psicopedagogía – Universidad del Salvador.</strong></p>
+                <p><strong>Profesor titular Seminario de Integración I – Facultad de Psicología – Universidad del Salvador.</strong></p>
+            </div>
+        </article>
 
-    <div class="entry-content">
-        <p>Bienvenidos a la página personal del Jorge G. Garzarelli.</p>
+        <article class="panel-content">
+            <div class="panel-image" style="background-image: url('assets/images/paz.jpg');"></div>
+            <header class="entry-header">
+                <h2 class="entry-title">Psicología por la Paz</h2>
+            </header>
+            <div class="entry-content">
+                <blockquote>
+                    <p>El nivel de concientización en las representaciones sociales de los conflictos que conducen a las guerras y a la ausencia de Paz, no es suficiente, por lo que se requerirá de mayores y mejores aportes por parte de todos para el logro paulatino de ese prístino valor que de continuo se nos escurre de las manos.</p>
+                </blockquote>
+            </div>
+        </article>
+
     </div>
-
-</div>
 </div>
 
-</article>
-
-<article id="panel1" class="twentyseventeen-panel  post-88 page type-page status-publish has-post-thumbnail hentry">
-
-<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/prometeo-2000x1200.jpg);">
-    <div class="panel-image-prop" style="padding-top: 60%"></div>
-</div>
-
-<div class="panel-content">
-<div class="wrap">
-    <header class="entry-header">
-        <h2 class="entry-title">El mito desde Freud, Jung y Lacan</h2>
-    </header>
-
-    <div class="entry-content">
-        <blockquote><p><a href="/category/el-mito-desde-freud-jung-lacan/index.html">Este trabajo nace como el efecto de un 'deseo de saber' acerca de los orígenes del mito. </a><br>
-<a href="/category/el-mito-desde-freud-jung-lacan/index.html">Pregunta inicial a la que se fueron añadiendo otras paulatinamente.</a><br>
-<a href="/category/el-mito-desde-freud-jung-lacan/index.html">¿Tienen los mitos su origen en el inconciente? </a></p></blockquote>
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-info">
+            <p>&copy; 2024 Jorge G. Garzarelli - Doctor en Psicología</p>
+            <p>Email: jorgegarzarelli@hotmail.com</p>
+        </div>
     </div>
-
-</div>
-</div>
-
-</article>
-
-<article id="panel2" class="twentyseventeen-panel  post-12 page type-page status-publish has-post-thumbnail hentry">
-
-<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/sop_ap_spans_spanoly_cast_1_1-2000x1200.jpg);">
-    <div class="panel-image-prop" style="padding-top: 60%"></div>
-</div>
-
-<div class="panel-content">
-<div class="wrap">
-    <header class="entry-header">
-        <h2 class="entry-title">Psicología del Deporte</h2>
-    </header>
-
-    <div class="entry-content">
-        <p><em><a href="/category/psicologia-del-deporte/index.html">Cualquier profesional que anhele pertenecer al deporte , deberá conocer profundamente no solo la conformación del mismo sino su historia y las reglas que, condicionan su estructura y su desarrollo.</a></em></p>
-    </div>
-
-</div>
-</div>
-
-</article>
-
-<article id="panel3" class="twentyseventeen-panel  post-9 page type-page status-publish has-post-thumbnail hentry">
-
-<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/Library-Books.jpg);">
-    <div class="panel-image-prop" style="padding-top: 60%"></div>
-</div>
-
-<div class="panel-content">
-<div class="wrap">
-    <header class="entry-header">
-        <h2 class="entry-title">Acerca de</h2>
-    </header>
-
-    <div class="entry-content">
-        <p><b>Doctor en Psicología (Diploma de Honor) egresado de la Facultad de Psicología – Universidad del Salvador – 1982. </b></p>
-<p><b>Licenciado de Psicología (Diploma de Honor), egresado de la Facultad de Psicología – </b><b>Universidad del Salvador – 1974 – Matrícula Nacional 10512</b></p>
-<p><b>Profesor Titular Psicología y Religión – Facultad de Psicología – Universidad del Salvador.</b></p>
-<p><b>Profesor Emérito de la Facultad de Psicología y Psicopedagogía – Universidad del Salvador.</b></p>
-<p><b>Profesor titular Seminario de Integración I – Facultad de Psicología – Universidad del </b><b>Salvador.</b></p>
-<p> <a href="/acerca-de/#more-9" class="more-link">Continuar leyendo<span class="screen-reader-text"> «Acerca de»</span></a></p>
-    </div>
-
-</div>
-</div>
-
-</article>
-
-<article id="panel4" class="twentyseventeen-panel  post-184 page type-page status-publish has-post-thumbnail hentry">
-
-<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/paz-2-2000x1200.jpg);">
-    <div class="panel-image-prop" style="padding-top: 60%"></div>
-</div>
-
-<div class="panel-content">
-<div class="wrap">
-    <header class="entry-header">
-        <h2 class="entry-title">Psicología por la Paz</h2>
-    </header>
-
-    <div class="entry-content">
-        <blockquote><p><a href="/category/psicologia-por-la-paz/index.html">El nivel de concientización en las representaciones sociales de los conflictos que conducen a las guerras y a la ausencia de Paz, no es suficiente, por lo que se requerirá de mayores y mejores aportes por parte de todos para el logro paulatino de ese prístino valor que de continuo se nos escurre de las manos.</a></p></blockquote>
-    </div>
-
-</div>
-</div>
-
-</article>
-
-</main>
-</div>
-
-</div>
-
-<footer id="colophon" class="site-footer" role="contentinfo">
-<div class="wrap">
-
-<aside class="widget-area" role="complementary" aria-label="Pie de página">
-<div class="widget-column footer-widget-1">
-<section id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categorías</h2>		<ul>
-<li class="cat-item cat-item-12"><a href="/category/arte/index.html">Arte</a>
-</li>
-<li class="cat-item cat-item-7"><a href="/category/clinica-abierta/index.html">Clínica Abierta</a>
-</li>
-<li class="cat-item cat-item-6"><a href="/category/el-mito-desde-freud-jung-lacan/index.html" title="Tesis doctoral del año 1986  - USAL">El mito desde Freud, Jung y Lacan</a>
-</li>
-<li class="cat-item cat-item-15"><a href="/category/piscologia-aplicada-al-turismo/index.html">Piscología aplicada al Turismo</a>
-</li>
-<li class="cat-item cat-item-10"><a href="/category/poemas/index.html">Poemas</a>
-</li>
-<li class="cat-item cat-item-9"><a href="/category/psicologia-del-arte/index.html">Psicología del Arte</a>
-</li>
-<li class="cat-item cat-item-4"><a href="/category/psicologia-del-deporte/index.html" title='Del Libro "Psicología del Deporte"'>Psicología del Deporte</a>
-</li>
-<li class="cat-item cat-item-8"><a href="/category/psicologia-por-la-paz/index.html">Psicología por la Paz</a>
-</li>
-<li class="cat-item cat-item-11"><a href="/category/seminarios/index.html">Seminarios</a>
-</li>
-<li class="cat-item cat-item-13"><a href="/category/sonido-color-y-afecto/index.html">Sonido-Color y Afectos</a>
-</li>
-</ul>
-</section>			</div>
-<div class="widget-column footer-widget-2">
-<section id="search-4" class="widget widget_search"><h2 class="widget-title">Búsqueda</h2>
-
-<form role="search" method="get" class="search-form" action="https://jorgegarzarelli.com.ar/">
-<label for="search-form-5f0c9954b94ff">
-    <span class="screen-reader-text">Buscar por:</span>
-</label>
-<input type="search" id="search-form-5f0c9954b94ff" class="search-field" placeholder="Buscar …" value="" name="s">
-<button type="submit" class="search-submit"><svg class="icon icon-search" aria-hidden="true" role="img"> <use href="#icon-search" xlink:href="#icon-search"></use> </svg><span class="screen-reader-text">Buscar</span></button>
-</form>
-</section>			</div>
-</aside>
-
-<nav class="social-navigation" role="navigation" aria-label="Menú de enlaces sociales del pié de página">
-    <div class="menu-menu-de-enlaces-sociales-container"><ul id="menu-menu-de-enlaces-sociales" class="social-links-menu"><li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="mailto:jorgegarzarelli@hotmail.com"><span class="screen-reader-text">Correo electrónico</span><svg class="icon icon-envelope-o" aria-hidden="true" role="img"> <use href="#icon-envelope-o" xlink:href="#icon-envelope-o"></use> </svg></a></li>
-</ul></div>
-</nav>
-<div class="site-info">
-<a href="https://wordpress.org/" class="imprint">
-Creado con WordPress	</a>
-</div>
-</div>
 </footer>
-</div>
-</div>
-<script type="text/javascript">
-/* <![CDATA[ */
-var twentyseventeenScreenReaderText = {"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>","expand":"Expande el men\u00fa inferior","collapse":"Plegar men\u00fa inferior","icon":"<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/skip-link-focus-fix.js"></script>
-<script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/navigation.js"></script>
-<script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/global.js"></script>
-<script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/jquery.scrollTo.js"></script>
-<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-behance" viewbox="0 0 37 32">
-<path class="path1" d="M33 6.054h-9.125v2.214h9.125v-2.214zM28.5 13.661q-1.607 0-2.607 0.938t-1.107 2.545h7.286q-0.321-3.482-3.571-3.482zM28.786 24.107q1.125 0 2.179-0.571t1.357-1.554h3.946q-1.786 5.482-7.625 5.482-3.821 0-6.080-2.357t-2.259-6.196q0-3.714 2.33-6.17t6.009-2.455q2.464 0 4.295 1.214t2.732 3.196 0.902 4.429q0 0.304-0.036 0.839h-11.75q0 1.982 1.027 3.063t2.973 1.080zM4.946 23.214h5.286q3.661 0 3.661-2.982 0-3.214-3.554-3.214h-5.393v6.196zM4.946 13.625h5.018q1.393 0 2.205-0.652t0.813-2.027q0-2.571-3.393-2.571h-4.643v5.25zM0 4.536h10.607q1.554 0 2.768 0.25t2.259 0.848 1.607 1.723 0.563 2.75q0 3.232-3.071 4.696 2.036 0.571 3.071 2.054t1.036 3.643q0 1.339-0.438 2.438t-1.179 1.848-1.759 1.268-2.161 0.75-2.393 0.232h-10.911v-22.5z"></path>
-</symbol>
-<!-- ... resto de los íconos SVG ... -->
-</defs>
-</svg>
 
+</div>
 </body>
 </html>
