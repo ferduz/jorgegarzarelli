@@ -58,6 +58,50 @@
 .menu-item a:hover {
 	color: #0e76a8;
 }
+
+/* Mejoras del menú */
+.main-navigation .menu {
+	font-size: 18px;
+}
+
+.menu-item a {
+	padding: 15px 20px;
+	display: block;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.menu-toggle {
+	font-size: 18px;
+	padding: 12px 20px;
+	background: #0e76a8;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.menu-toggle:hover {
+	background: #0a5a7a;
+}
+
+@media screen and (max-width: 768px) {
+	.main-navigation .menu {
+		font-size: 20px;
+	}
+	
+	.menu-item a {
+		padding: 18px 25px;
+		border-bottom: 1px solid #eee;
+		font-size: 18px;
+	}
+	
+	.menu-toggle {
+		font-size: 20px;
+		padding: 15px 25px;
+	}
+}
 </style>	<style id="twentyseventeen-custom-header-styles" type="text/css">
 			.site-title a,
 		.colors-dark .site-title a,
@@ -187,7 +231,7 @@ width: 26% !important;
 				<div class="wrap">
 					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Menú superior">
 	<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-		<svg class="icon icon-bars" aria-hidden="true" role="img"> <use href="#icon-bars" xlink:href="#icon-bars"></use> </svg><svg class="icon icon-close" aria-hidden="true" role="img"> <use href="#icon-close" xlink:href="#icon-close"></use> </svg>Menú	</button>
+		Menú	</button>
 
 	<div class="menu-menu-superior-container"><ul id="top-menu" class="menu"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-21"><a href="">Inicio</a></li>
 <li id="menu-item-370" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-370"><a href="category/sonido-color-y-afecto/index.html">Sonido-Color y Afectos</a></li>
@@ -202,7 +246,7 @@ width: 26% !important;
 <li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-299"><a href="category/seminarios/index.html">Seminarios</a></li>
 <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="contacto/index.html">Contacto</a></li>
 </ul></div>
-			<a href="#content" class="menu-scroll-down"><svg class="icon icon-arrow-right" aria-hidden="true" role="img"> <use href="#icon-arrow-right" xlink:href="#icon-arrow-right"></use> </svg><span class="screen-reader-text">Desplazarse al contenido</span></a>
+			<a href="#content" class="menu-scroll-down"><span class="screen-reader-text">Desplazarse al contenido</span></a>
 	</nav>
 				</div>
 			</div>
