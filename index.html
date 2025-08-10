@@ -25,7 +25,40 @@
 
 
 
-<style> .entry-footer .byline{ display:none !important; } </style><style> .entry-meta .byline{ display:none !important; } </style><style> .entry-footer .posted-on{ display:none !important; } </style><style> .entry-meta .entry-date{ display:none !important; } </style><style> .entry-meta .date{ display:none !important; } </style><style> .entry-footer .cat-links{ display:none !important; } </style><style> .entry-meta .cat-links{ display:none !important; } </style><style> .entry-meta .categories-links{ display:none !important; } </style><style> .entry-footer .comments-link{ display:none !important; } </style><style> .entry-meta .comments-link{ display:none !important; } </style><style> .entry-footer .edit-link{ display:none !important; } </style><style> .entry-meta .edit-link{ display:none !important; } </style>	<style id="twentyseventeen-custom-header-styles" type="text/css">
+<style>
+/* Ocultar elementos meta */
+.entry-footer .byline,
+.entry-meta .byline,
+.entry-footer .posted-on,
+.entry-meta .entry-date,
+.entry-meta .date,
+.entry-footer .cat-links,
+.entry-meta .cat-links,
+.entry-meta .categories-links,
+.entry-footer .comments-link,
+.entry-meta .comments-link,
+.entry-footer .edit-link,
+.entry-meta .edit-link {
+	display: none !important;
+}
+
+/* Mejoras de rendimiento */
+.panel-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Transiciones suaves */
+.menu-item a,
+.more-link {
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+	color: #0e76a8;
+}
+</style>	<style id="twentyseventeen-custom-header-styles" type="text/css">
 			.site-title a,
 		.colors-dark .site-title a,
 		.colors-custom .site-title a,
@@ -68,13 +101,40 @@
 }
 
 .wrap {
-max-width: 85%;
+	max-width: 85%;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 @media screen and (min-width: 48em) {
-.wrap {
-max-width: 85%;
+	.wrap {
+		max-width: 85%;
+	}
 }
+
+@media screen and (max-width: 768px) {
+	.wrap {
+		max-width: 95%;
+		padding: 0 15px;
+	}
+	
+	.site-title {
+		font-size: 36px;
+		padding: 30px 0 10px;
+	}
+	
+	.custom-logo-link img {
+		max-width: 300px;
+		max-height: 150px;
+	}
+	
+	.navigation-top {
+		background: rgba(255,255,255,0.95);
+	}
+	
+	.main-navigation .menu {
+		flex-direction: column;
+	}
 }
 
 .page.page-one-column:not(.twentyseventeen-front-page) #primary {
@@ -105,7 +165,7 @@ width: 26% !important;
 		<div class="custom-header">
 
 		<div class="custom-header-media">
-			<div id="wp-custom-header" class="wp-custom-header"><img src="wp-content/uploads/2019/08/cropped-196.jpg" width="2000" height="1201" alt="Jorge G. Garzarelli" srcset="wp-content/uploads/2019/08/cropped-196.jpg 2000w,wp-content/uploads/2019/08/cropped-196-300x180.jpg 300w,wp-content/uploads/2019/08/cropped-196-768x461.jpg 768w,wp-content/uploads/2019/08/cropped-196-1024x615.jpg 1024w" sizes="100vw"></div>		</div>
+			<div id="wp-custom-header" class="wp-custom-header"><img src="wp-content/uploads/2019/08/cropped-196.jpg" width="2000" height="1201" alt="Imagen de cabecera del Dr. Jorge G. Garzarelli, Doctor en Psicología" srcset="wp-content/uploads/2019/08/cropped-196.jpg 2000w,wp-content/uploads/2019/08/cropped-196-300x180.jpg 300w,wp-content/uploads/2019/08/cropped-196-768x461.jpg 768w,wp-content/uploads/2019/08/cropped-196-1024x615.jpg 1024w" sizes="100vw"></div>		</div>
 
 	<div class="site-branding">
 	<div class="wrap">
@@ -162,12 +222,14 @@ width: 26% !important;
 	<div class="panel-content">
 		<div class="wrap">
 			<header class="entry-header">
-				<h2 class="entry-title">Inicio</h2>
+				<h2 class="entry-title">Bienvenido</h2>
 				
 			</header>
 
 			<div class="entry-content">
-				<p>Bienvenidos a la página personal del Jorge G. Garzarelli.</p>
+				<p>Bienvenidos a la página personal del <strong>Dr. Jorge G. Garzarelli</strong>, Doctor en Psicología.</p>
+				<p>Aquí encontrarás información sobre mis investigaciones, publicaciones y aportes en diversas áreas de la psicología, incluyendo el estudio de los mitos, psicología del deporte, psicología por la paz, y mucho más.</p>
+				<p>Explora las diferentes secciones para conocer más sobre mi trabajo académico y profesional.</p>
 			</div>
 
 		</div>
@@ -179,7 +241,7 @@ width: 26% !important;
 <article id="panel1" class="twentyseventeen-panel  post-88 page type-page status-publish has-post-thumbnail hentry">
 
 	
-		<div class="panel-image" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2018/07/prometeo-2000x1200.jpg);">
+		<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/prometeo-2000x1200.jpg);">
 			<div class="panel-image-prop" style="padding-top: 60%"></div>
 		</div>
 
@@ -192,9 +254,11 @@ width: 26% !important;
 			</header>
 
 			<div class="entry-content">
-				<blockquote><p><a href="category/el-mito-desde-freud-jung-lacan/index.html">Este trabajo nace como el efecto de un ‘deseo de saber’ acerca de los orígenes del mito. </a><br>
-<a href="category/el-mito-desde-freud-jung-lacan/index.html">Pregunta inicial a la que se fueron añadiendo otras paulatinamente.</a><br>
-<a href="category/el-mito-desde-freud-jung-lacan/index.html">¿Tienen los mitos su origen en el inconciente? </a></p></blockquote>
+				<blockquote>
+					<p><a href="category/el-mito-desde-freud-jung-lacan/index.html" aria-label="Leer más sobre el estudio de los mitos">Este trabajo nace como el efecto de un 'deseo de saber' acerca de los orígenes del mito.</a></p>
+					<p><a href="category/el-mito-desde-freud-jung-lacan/index.html" aria-label="Continuar leyendo sobre las preguntas del estudio">Pregunta inicial a la que se fueron añadiendo otras paulatinamente.</a></p>
+					<p><a href="category/el-mito-desde-freud-jung-lacan/index.html" aria-label="Explorar la relación entre mitos e inconsciente">¿Tienen los mitos su origen en el inconsciente?</a></p>
+				</blockquote>
 			</div>
 
 			
@@ -206,7 +270,7 @@ width: 26% !important;
 <article id="panel2" class="twentyseventeen-panel  post-12 page type-page status-publish has-post-thumbnail hentry">
 
 	
-		<div class="panel-image" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2018/07/sop_ap_spans_spanoly_cast_1_1-2000x1200.jpg);">
+		<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/sop_ap_spans_spanoly_cast_1_1-2000x1200.jpg);">
 			<div class="panel-image-prop" style="padding-top: 60%"></div>
 		</div>
 
@@ -219,7 +283,7 @@ width: 26% !important;
 			</header>
 
 			<div class="entry-content">
-				<p><em><a href="category/psicologia-del-deporte/index.html">Cualquier profesional que anhele pertenecer al deporte , deberá conocer profundamente no solo la conformación del mismo sino su historia y las reglas que, condicionan su estructura y su desarrollo.</a></em></p>
+				<p><em><a href="category/psicologia-del-deporte/index.html" aria-label="Leer más sobre psicología del deporte">Cualquier profesional que anhele pertenecer al deporte, deberá conocer profundamente no solo la conformación del mismo sino su historia y las reglas que condicionan su estructura y su desarrollo.</a></em></p>
 			</div>
 
 			
@@ -231,7 +295,7 @@ width: 26% !important;
 <article id="panel3" class="twentyseventeen-panel  post-9 page type-page status-publish has-post-thumbnail hentry">
 
 	
-		<div class="panel-image" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2018/07/Library-Books.jpg);">
+		<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/Library-Books.jpg);">
 			<div class="panel-image-prop" style="padding-top: 60%"></div>
 		</div>
 
@@ -261,7 +325,7 @@ width: 26% !important;
 <article id="panel4" class="twentyseventeen-panel  post-184 page type-page status-publish has-post-thumbnail hentry">
 
 	
-		<div class="panel-image" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2018/07/paz-2-2000x1200.jpg);">
+		<div class="panel-image" style="background-image: url(https://jorgegarzarelli.com.ar/wp-content/uploads/2018/07/paz-2-2000x1200.jpg);">
 			<div class="panel-image-prop" style="padding-top: 60%"></div>
 		</div>
 
@@ -274,7 +338,7 @@ width: 26% !important;
 			</header>
 
 			<div class="entry-content">
-				<blockquote><p><a href="category/psicologia-por-la-paz/index.html">El nivel de concientización en las representaciones sociales de los conflictos que conducen a las guerras y a la ausencia de Paz, no es suficiente, por lo que se requerirá de mayores y mejores aportes por parte de todos para el logro paulatino de ese prístino valor que de continuo se nos escurre de las manos.</a></p></blockquote>
+				<blockquote><p><a href="category/psicologia-por-la-paz/index.html" aria-label="Explorar el trabajo en psicología por la paz">El nivel de concientización en las representaciones sociales de los conflictos que conducen a las guerras y a la ausencia de Paz no es suficiente, por lo que se requerirá de mayores y mejores aportes por parte de todos para el logro paulatino de ese prístino valor que de continuo se nos escurre de las manos.</a></p></blockquote>
 			</div>
 
 			
@@ -321,7 +385,7 @@ width: 26% !important;
 					<div class="widget-column footer-widget-2">
 				<section id="search-4" class="widget widget_search"><h2 class="widget-title">Búsqueda</h2>
 
-<form role="search" method="get" class="search-form" action="http://OFFLINEZIP.wpsho/">
+<form role="search" method="get" class="search-form" action="https://jorgegarzarelli.com.ar/">
 	<label for="search-form-5f0c9954b94ff">
 		<span class="screen-reader-text">Buscar por:</span>
 	</label>
