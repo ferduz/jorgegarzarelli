@@ -1,0 +1,117 @@
+/* Solución CSS para ocultar iconos SVG grandes en todo el sitio */
+/* Este archivo elimina los iconos molestos sin tener que editar cada página individual */
+
+/* Ocultar iconos SVG en botones y enlaces */
+.search-submit svg,
+.menu-toggle svg,
+.social-links-menu svg,
+.menu-scroll-down svg,
+button svg,
+a svg {
+    display: none !important;
+}
+
+/* Ocultar iconos grandes en widgets de búsqueda */
+.search-form svg,
+.widget_search svg {
+    display: none !important;
+}
+
+/* Mejorar botones sin iconos */
+.search-submit {
+    padding: 8px 15px;
+    background: #0e76a8;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search-submit:hover {
+    background: #0a5a7a;
+}
+
+.search-submit::after {
+    content: "Buscar";
+}
+
+/* Mejorar enlaces sociales sin iconos */
+.social-links-menu a {
+    padding: 10px 15px;
+    background: #0e76a8;
+    color: white !important;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.social-links-menu a:hover {
+    background: #0a5a7a;
+}
+
+.social-links-menu a[href*="mailto"]::after {
+    content: "Contacto por Email";
+}
+
+/* Mejorar botón de menú sin iconos */
+.menu-toggle {
+    font-size: 18px;
+    padding: 12px 20px;
+    background: #0e76a8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background: #0a5a7a;
+}
+
+.menu-toggle::after {
+    content: " Menú";
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+    
+    .main-navigation .menu {
+        font-size: 20px;
+    }
+    
+    .menu-item a {
+        padding: 18px 25px;
+        border-bottom: 1px solid #eee;
+        font-size: 18px;
+        display: block;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+}
+
+/* Ocultar completamente cualquier SVG restante */
+svg.icon {
+    display: none !important;
+}
+
+/* Mejoras generales de usabilidad */
+.menu-item a {
+    padding: 15px 20px;
+    display: block;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item a:hover {
+    color: #0e76a8;
+}
